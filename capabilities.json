@@ -1,0 +1,59 @@
+{
+  "dataRoles": [
+    {
+      "displayName": "Date",
+      "name": "date",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Available",
+      "name": "available",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Reachable",
+      "name": "reachable",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Not Reachable",
+      "name": "notReachable",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Holiday",
+      "name": "holiday",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Phone Only",
+      "name": "phoneOnly",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Not Started",
+      "name": "notStarted",
+      "kind": "Measure"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "categorical": {
+        "categories": {
+          "for": { "in": "date" }
+        },
+        "values": {
+          "select": [
+            { "bind": { "to": "available" } },
+            { "bind": { "to": "reachable" } },
+            { "bind": { "to": "notReachable" } },
+            { "bind": { "to": "holiday" } },
+            { "bind": { "to": "phoneOnly" } },
+            { "bind": { "to": "notStarted" } }
+          ]
+        }
+      }
+    }
+  ],
+  "privileges": []
+}
